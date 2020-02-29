@@ -1,35 +1,22 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-// import {Product} from './product';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import {CartListComponent} from './cart-list/cart-list.component';
+import { CartListComponent } from './cart-list/cart-list.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      // { path: '', component: AppComponent },
-      { path: 'product', component: ProductListComponent },
-      { path: 'cart', component: CartListComponent },
-    ])
-  ],
   declarations: [
     AppComponent,
     ProductListComponent,
     CartListComponent
   ],
-  // providers:[Product],
-  bootstrap: [ AppComponent ]
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
