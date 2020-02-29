@@ -1,0 +1,13 @@
+#products{
+  display:flex;
+}
+.addcart{
+  margin-right: 10px;
+  background-color: green;
+}
+.itemBlk{
+  padding: 20px;
+  border: 1px solid;
+  margin:10px;
+  text-align: center;
+}
